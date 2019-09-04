@@ -1,6 +1,15 @@
+@font-face {
+    font-family: ttf;
+    src: url(comic.ttf);
+}
+
 body {
     background-image: url(gif.gif);
     background-color: #cccccc;
     background-position: center;
     background-size: cover;
+}
+
+title {
+    font-family: ttf;
 }
