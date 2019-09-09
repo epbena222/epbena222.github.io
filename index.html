@@ -17,13 +17,17 @@
 
 </html>
 
-<script src="/audiojs/audio.min.js"></script>
 <script>
-    audiojs.events.ready(function() {
-        var as = audiojs.createAll();
-    });
+    src = "/howler.js-master/dist/howlwer.js"
 </script>
 <script>
-    var audio = new Audio('deadman.mp3');
-    audio.play();
+    var sound = new Howl({
+        src: ['deadman.mp3'],
+        autoplay: true,
+        loop: true,
+        volume: 1,
+        onend: function() {
+            console.log('Finished!');
+        }
+    });
 </script>
