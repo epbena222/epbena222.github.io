@@ -21,14 +21,16 @@
 <script>
     src = "/howler.js-master/dist/howlwer.js"
 </script>
-<script>
-    var sound = new Howl({
-        src: ['deadman.mp3'],
-        autoplay: true,
-        loop: true,
-        volume: 1,
-        onend: function() {
-            console.log('Finished!');
-        }
+<script>    
+var sound = new Howl({
+  src: ['deadman.mp3'],
+  autoplay: true,
+  loop: true,
+  volume: 1,
+  onplayerror: function() {
+    sound.once('unlock', function() {
+      sound.play();
     });
+  }
+});
 </script>
